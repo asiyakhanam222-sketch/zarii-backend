@@ -10,7 +10,7 @@ app.use(cors());
 app.use("/images", express.static("images"));
 
 /* ===== MongoDB connect ===== */
-mongoose.connect(process.env.MONGO_URL)
+mongoose.connect(process.env.MONGO_URI)
 .then(() => console.log("MongoDB Connected"))
 .catch(err => console.log("Mongo Error:", err));
 
