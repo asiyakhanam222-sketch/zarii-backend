@@ -16,6 +16,7 @@ mongoose.connect(process.env.MONGO_URI)
 
 /* ===== USER SCHEMA ===== */
 const userSchema = new mongoose.Schema({
+  name: String,
   mobile: String,
   password: String,
   role: { type: String, default: "user" }
